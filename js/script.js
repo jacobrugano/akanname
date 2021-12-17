@@ -32,7 +32,7 @@ if (year <= 0 || year >2021) {
 
 
 //Declaring the Akannames
-var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var maleName = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
 var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
 if (gender === "male") {
@@ -41,23 +41,23 @@ if (gender === "male") {
     switch (d) {
 
       case "b":
-        alert("Your Akan name is:" + male(0));
+        alert("Your Akan name is:" + maleName(0));
         break;
  // block of code to be executed if the condition is true
       case "c":
-      alert("Your Akan name is: ""+ male(1));
+      alert("Your Akan name is: ""+ maleName(1));
       break;
  // block of code to be executed if the condition is true
       case "d";
-      alert("Your Akan name is:"+ male(2));
+      alert("Your Akan name is:"+ maleName(2));
       break;
  // block of code to be executed if the condition is true
       case "e";
-      alert("Your Akan name is: " + male(3));
+      alert("Your Akan name is: " + maleName(3));
       break;
  // block of code to be executed if the condition is true
       case "f";
-      alert("Your Akan name is: " + male(4));
+      alert("Your Akan name is: " + maleName(4));
       break;
  // block of code to be executed if the condition is true
     }
@@ -70,23 +70,23 @@ if (gender === "Female") {
     var d = d.toFixed();
     switch (d) {
       case "b":
-        alert("Your Akan name is:" + female(0));
+        alert("Your Akan name is:" + femaleName(0));
         break;
  // block of code to be executed if the condition is true
       case "c":
-      alert("Your Akan name is: ""+ female(1));
+      alert("Your Akan name is: ""+ femaleName(1));
       break;
  // block of code to be executed if the condition is true
       case "d";
-      alert("Your Akan name is:"+ female(2));
+      alert("Your Akan name is:"+ femaleName(2));
       break;
  // block of code to be executed if the condition is true
       case "e";
-      alert("Your Akan name is: " + female(3));
+      alert("Your Akan name is: " + femaleName(3));
       break;
  // block of code to be executed if the condition is true
       case "f";
-      alert("Your Akan name is: " + female(4));
+      alert("Your Akan name is: " + femaleName(4));
       break;
  // block of code to be executed if the condition is true
     }
