@@ -1,8 +1,8 @@
 function findAkan(){
   var date = document.getElementById('date').value;
+  var gender = document.getElementById('gender').value;
   var month = document.getElementById('month').value;
   var year = document.getElementById('year').value;
-  var gender = document.getElementById('gender').value;
 
 if (date <=0 || date > 31) {
   alert("Please enter a valid date");
@@ -13,10 +13,10 @@ else if (month <= 0 || month >12) {
   return;
 };
 var dd = parseInt(date);
-var mm = parseInt(month);
 var y = year.slice(3, 4);
-var yy = parseInt(y);
 var c = year.slice(0, 1);
+var yy = parseInt(y);
+var mm = parseInt(month);
 var cc = parseInt(c);
 var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
 
