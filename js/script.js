@@ -1,4 +1,4 @@
-function findAkan(){
+function findName(){
   var date = document.getElementById('date').value;
   var gender = document.getElementById('gender').value;
   var month = document.getElementById('month').value;
