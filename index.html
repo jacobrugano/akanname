@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <title>Akan Names</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1 id="title">Akan Names</h1>
+                <style>
+                    .jumbotron {
+                        background-image: url("");
+                        background-size: contain;
+                    }
+                </style>
+            </div>
+
+            <p>The Akan people of Ghana frequently name their children after the day of the week they were born and the order in which they were born. These "day names" have further meanings concerning the soul and character of the person. Middle names have considerably more variety and can refer to their birth order, twin status, or an ancestor's middle name.
+               This naming tradition is shared throughout West Africa and the African diaspora.
+            </p>
+            <p>
+                There are also special names for elder and younger twins. The second twin to be born is considered the elder as they were mature enough to help their sibling out first. (The definition above must be a regional concept because in Cape Coast, heart of Fanti land, the elder twin is the one who comes out first, the second twin is considered the younger one. Therefore, The younger twin would be Kakra; the older twin would be Panyin.
+            </p>
+            <p><strong>This web application takes a user's birthday and calculates the day of the week you were born and then depending on the gender you have selected below, displays your Akan Name.</strong>
+            </p>
+            <p>Here are some Ghanaian Akan Names</p>
+
+            <div class="row">
+                <div class="sidebar">
+                <ul>
+                    <h3>Male</h3>
+                    <li>Sunday: Kwasi</li>
+
+                    <li>Monday: Kwadwo</li>
+
+                    <li>Tuesday: Kwabena</li>
+
+                    <li>Wednesday: Kwaku</li>
+
+                    <li>Thursday:  Yaw</li>
+
+                    <li>Friday: Kofi</li>
+
+                    <li>Saturday: Kwame</li>
+                </ul>
+                </div>
+                <div class="sidebar2">
+
+                <ul>
+                    <h3>Female</h3>
+                    <li>Sunday: Akosua</li>
+
+                    <li>Monday: Adwoa</li>
+
+                    <li>Tuesday: Abenaa</li>
+
+                    <li>Wednesday: Akua</li>
+
+                    <li>Thursday:  Yaa</li>
+
+                    <li>Friday: Afua</li>
+
+                    <li>Saturday: Ama</li>
+                </ul>
+                </div>
+            </div>
+
+
+            <div class="sidebar3">
+
+            </div>
+            <form method="post" class="akan_name" id="akan-form">
+                <div class="form-group">
+                    <h2>PLEASE ENTER YOUR BIRTHDAY AND GENDER HERE</h2>
+                    <label class="control-label" for="date">Date of Birth:</label>
+                    <input class="form-control col-sm-8" id="date" name="date" placeholder="MM/DD/YYY"
+                    type="date" />
+
+                    <label class="control-label d-block" for="gender">Select your Gender</label>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="male" value="male"
+                                name="gender">
+                            <label class="custom-control-label" for="male">Male</label>
+                        </div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="female" value="female"
+                                name="gender">
+                            <label class="custom-control-label" for="female">Female</label>
+
+                </div>
+                <div class="form-group">
+
+                    <button class="btn btn-primary " name="submit" id="submit"
+                    type="button">Get Akan Name</button>
+                </div>
+                <div id="akan-name"></div>
+            </form>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
