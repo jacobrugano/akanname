@@ -13,8 +13,8 @@ else if (month <= 0 || month >12) {
   return;
 };
 var dd = parseInt(date);
-var y = year.slice(3, 4);
-var c = year.slice(0, 1);
+var y = year.slice(2, 4);
+var c = year.slice(0, 2);
 var yy = parseInt(y);
 var mm = parseInt(month);
 var cc = parseInt(c);
