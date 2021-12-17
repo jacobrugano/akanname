@@ -1,3 +1,4 @@
+
 // Declaring variables from the userinput and assigning values to them
 function findName(){
   var date = document.getElementById('date').value;
@@ -14,14 +15,21 @@ function findName(){
   var mm = parseInt(month);
   var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7 //d representing the day of the week.
 
-if (date <=0 || date > 31) {
-  alert("Enter a valid date");
-  return;
+if (year <= 0 || year >2021) {
+    alert("Please provide a valid year of birth! eg 2019")
+    return false;
+  };
+
+  else if (month <= 0 || month >12) {
+    alert("Please provide your month of birth! between 1 and 12"")
+    return false;
+  };
+
+ else if (date <=0 || date > 31) {
+  alert("Please provide a valid date that you were born in!");
+  return false;
 }
-else if (month <= 0 || month >12) {
-  alert("Enter a valid month")
-  return;
-};
+
 
 //Declaring the Akannames
 var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
@@ -87,7 +95,12 @@ if (gender === "Female") {
 }
 
 if (gender === "") {
-  alert("Ensure you choose one gender");
+  alert("You must select male or female");
+}
+return false;
+}
+else{
+return true ;
 }
 
 
