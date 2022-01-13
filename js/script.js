@@ -1,115 +1,92 @@
 
-// Declaring variables from the userinput and assigning values to them
-function findName(){
-  var date = document.getElementById('date').value;
-  var gender = document.getElementById('gender').value;
-  var month = document.getElementById('month').value;
-  var year = document.getElementById('year').value;
+function findAkanName() {
+// Collecting/capturing users data.
+  var date = document.getElementById("date").value;
+  var month = document.getElementById("month").value;
+  var year = document.getElementById("year").value;
 
 //Declaring variables from the formulae.
-  var cc = parseInt(c);
-  var c = year.slice(0, 2);
-  var yy = parseInt(y);
-  var y = year.slice(2, 4);
-  var dd = parseInt(date);
-  var mm = parseInt(month);
-  var d = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7 //d representing the day of the week.
+  var DD = parseInt(date);
+  var MM = parseInt(month);
+  var Y = year.slice(2, 4);  //we can also do this by var Y = parseInt(year.toString().slice(2, 4));
+  var YY = parseInt(Y);
+  var CC = Math.ceil(year / 100) //to round the number UPWARDS to the nearest integer, and return the result.
+  var outputtedDate = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7;
+  var calculatedDate = Math.floor(outputtedDate); //run Math.floor() to get the largest integer less than or equal to the provided number
+  var intergeredDate = Math.round(outputtedDate); //to return the value of a number rounded to the nearest integer
 
-if (year <= 0 || year >2021) {
-    alert("Please provide a valid year of birth! eg 2019")
-    return false;
-  };
-
-  else if (month <= 0 || month >12) {
-    alert("Please provide your month of birth! between 1 and 12"")
-    return false;
-  };
-
- else if (date <=0 || date > 31) {
-  alert("Please provide a valid date that you were born in!");
-  return false;
-}
+//Declaring the days variables
+  var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  var femaleNames = ["Akosua", " Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
-//Declaring the Akannames
-var maleName = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
-var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-if (gender === "male") {
-  function male(){
-    var d = d.toFixed();
-    switch (d) {
-
-      case "b":
-        alert("Your Akan name is:" + maleName(0));
-        break;
- // block of code to be executed if the condition is true
-      case "c":
-      alert("Your Akan name is: ""+ maleName(1));
-      break;
- // block of code to be executed if the condition is true
-      case "d";
-      alert("Your Akan name is:"+ maleName(2));
-      break;
- // block of code to be executed if the condition is true
-      case "e";
-      alert("Your Akan name is: " + maleName(3));
-      break;
- // block of code to be executed if the condition is true
-      case "f";
-      alert("Your Akan name is: " + maleName(4));
-      break;
- // block of code to be executed if the condition is true
-    }
+  if (document.getElementById("gender").checked) {     //to return the selected property in the select box
+    var gender = 'male';
   }
-  male();
-}
-
-if (gender === "Female") {
-  function Female(){
-    var d = d.toFixed();
-    switch (d) {
-      case "b":
-        alert("Your Akan name is:" + femaleName(0));
-        break;
- // block of code to be executed if the condition is true
-      case "c":
-      alert("Your Akan name is: ""+ femaleName(1));
-      break;
- // block of code to be executed if the condition is true
-      case "d";
-      alert("Your Akan name is:"+ femaleName(2));
-      break;
- // block of code to be executed if the condition is true
-      case "e";
-      alert("Your Akan name is: " + femaleName(3));
-      break;
- // block of code to be executed if the condition is true
-      case "f";
-      alert("Your Akan name is: " + femaleName(4));
-      break;
- // block of code to be executed if the condition is true
-    }
+  else {
+    var gender = 'female';
   }
-  Female();
-}
 
-if (gender === "") {
-  alert("You must select male or female");
-}
-return false;
-}
-else{
-return true ;
-}
+  //validation of the user data provided above
+ //control flow
 
-
-
-
-
-
-
-
-
-
+  if (DD <= 0 || DD > 31) {
+    alert("invalid date");
+  }
+  else if (YY <= 0 || YY >99) {
+    alert("Please provide a valid year of birth! eg 2019");
+  }
+  else if (MM <= 0 || MM > 12) {
+    alert("invalid month");
+  }
+  else if (MM == 2 && DD > 29) {
+    alert("invalid day of month");
+  }
+  else if (calculatedDate == 0 && gender === 'male') {
+  alert(document.getElementById("display").innerHTML = ("You were born on " + days[0] + " your Akan Name is " + maleNames[0]));
+  }
+  else if (calculatedDate == 1 || intergeredDate == -1 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on " + days[1] + "your Akan Name is " + maleNames[1]));
+  }
+  else if (calculatedDate == 2 || intergeredDate == -2 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[2] + "your Akan Name is " + maleNames[2]));
+  }
+  else if (calculatedDate == 3 || intergeredDate == -3 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[3] + "your Akan Name is " + maleNames[3]));
+  }
+  else if (calculatedDate == 4 || intergeredDate == -4 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[4] + "your Akan Name is " + maleNames[4]));
+  }
+  else if (calculatedDate == 5 || intergeredDate == -5 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[5] + "your Akan Name is " + maleNames[5]));
+  }
+  else if (calculatedDate == 6 || intergeredDate == -6 && gender === 'male') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[6] + "your Akan Name is " + maleNames[6]));
+  }
+  else if (calculatedDate == 0 && gender === 'female') {
+  alert(document.getElementById("display").innerHTML = ("You were born on" + days[0] + "your Akan name is " + femaleNames[0]));
+  }
+  else if (calculatedDate == 1 || intergeredDate == -1 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[1] + "your Akan Name is " + femaleNames[1]));
+  }
+  else if (calculatedDate == 2 || intergeredDate == -2 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[2] + "your Akan Name is " + femaleNames[2]));
+  }
+  else if (calculatedDate == 3 || intergeredDate == -3 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[3] + "your Akan Name is " + femaleNames[3]));
+  }
+  else if (calculatedDate == 4 || intergeredDate == -4 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[4] + "your Akan Name is " + femaleNames[4]));
+  }
+  else if (calculatedDate == 5 || intergeredDate == -5 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[5] + "your Akan Name is " + femaleNames[5]));
+  }
+  else if (calculatedDate == 6 || intergeredDate == -6 && gender === 'female') {
+    alert(document.getElementById("display").innerHTML = ("You were born on" + days[6] + "your Akan Name is " + femaleNames[6]));
+  }
+  else {
+    alert("Check if you inputted the correct data!");
+  }
 }

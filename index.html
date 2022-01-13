@@ -1,4 +1,61 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Akan Names</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/5185a2b2a1.js" crossorigin="anonymous"></script>
+                                            <!-- above link is for linking the code to my fontawesome.com account where i got the icons -->
+  </head>
+  <body>
+    <div class="hero">
+      <div class="paragraph">
+        <p><strong>In Ghana, children are given their first name  as a 'day name', after the day of the week they were born.These names are called the Akan
+            Names. This application is to help you know the day of the week you were born and your Akan Name corresponding to your day and your gender. Fill the information about your date of birth and gender in the form to know your Akan Name:</strong></p>
+      </div>
+          <form>
+            <div class="input-group">
+              <input  name="date" type="text" class="name" id="date" required>
+              <label for="date"><i class="fas fa-align-left"></i>Enter your date of Birth eg 01...</label>
+            <!-- The <i class="fas fa-align-left"> is gotten from the fontawesome.com -->
+          </div>
+          <div class="input-group">
+              <input type="text" name="month" id="month" required>
+              <label for="month"><i class="fas fa-phone-square-alt"></i>Enter your Month of Birth Eg 11</label>
+                <!-- The <i class="fas fa-phone-square-alt"> is gotten from the fontawesome.com -->
+          </div>
+
+         <div class="input-group">
+              <input type="text" id="year" name="year" required>
+              <label for="year"><i class="fas fa-envelope-open-text"></i>Enter your Year of Birth</label>
+        </div>
+
+        <!-- The <i class="fas fa-envelope-open-text"> is gotten from the fontawesome.com -->
+        <div class="input-group">
+            <textarea rows="8" required></textarea>
+            <label for="message"><i class="fas fa-comments"></i> Type in your favorite birthday experience</label>
+        </div>
+            <select name="gender" value="gender" checked>
+              <option name="gender" value="male" id="gender" checked>MALE</option>
+              <option name="gender" value="female" id="gender" checked>FEMALE</option>
+           </select>
+          <!-- The <i class="fas fa-comments"> is gotten from the fontawesome.com account where i opeed an account login:jacobrugano-->
+          <button type="button" name="button" id ="button" onclick="findAkanName();"><i class="far fa-share-square"></i>SUBMIT</button>
+<div class="">
+   <p id="display"></p>
+</div>
+      </form>
+
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
+<!--
+
+
+<!DOCTYPE html>
 <html>
     <head>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
@@ -73,38 +130,46 @@
             <div class="sidebar3">
 
             </div>
-            <form class="form" action="results.html" method="get">
+            <form id="formdesign" action="" method="get">
             <h2>PLEASE ENTER YOUR BIRTHDAY AND GENDER HERE</h2>
             <div>
               <label for="date">Date</label>
-              <input type="" name="date" id="date">
+              <input type="text" name="date" id="day">
             </div>
             <div>
               <label for="year">Year</label>
-              <input type="year" name="Year" id="year">
+              <input type="text" name="Year" id="year">
             </div>
             <div>
               <label for="month">Month</label>
-              <input type="month" name="month" id="month">
+              <input type="text" name="month" id="month">
             </div>
 
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="male" value="male"
-                    name="gender">
+            <label>Gender</label><br>
+            <input type="radio" name="gender" id="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" id="gender" value="female" checked> Female<br><br>
+              <! <select name="genderr" value="gender" id="gender">
+                <option value="male" checked id="male" >MALE</option>
+                <option value="female" id="female" >FEMALE</option>
+              </select> -->
+            <!-- <div class="custom-control custom-radio custom-control-inline" id = "gender">
+                <input type="radio" class="custom-control-input" id="male" value="male" name="gender">
                 <label class="custom-control-label" for="male">Male</label>
-            </div>
-
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" class="custom-control-input" id="female" value="female"
-                    name="gender">
+                <input type="radio" class="custom-control-input" id="female" value="female" name="gender">
                 <label class="custom-control-label" for="female">Female</label>
+
+            </div> -->
+ <!-- class="btn btn-primary" value="submit" onclick="findName() -->
+            <!-- <div class="button">
+                <button type="submit" id="buttonsubmit">FINDAKAN</button>
             </div>
 
-            <div class="button">
-                <button type="submit" class="btn btn-primary" onclick="findName();">findName</button>
+              <div class="findName">
+         <a href="#result"><button type="button" name="button" class="btn btn-primary mb-2"
+             onclick="findName();">Submit</button>
             </div>
 
             </form>
         <script src="js/script.js"></script>
-    </body>
-</html>
+    </body> -->
+<!-- </html>  -->
